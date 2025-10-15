@@ -1,2 +1,32 @@
-# Auto detect text files and perform LF normalization
+# Normalize text files while letting Git choose platform endings on checkout
 * text=auto
+
+# AutoHotkey and helper scripts
+*.ahk text
+*.ps1 text
+*.bat text
+*.cmd text
+*.sh text
+
+# Configuration and data files
+*.json text
+*.cfg  text
+*.ini  text
+*.yml  text
+*.yaml text
+*.txt  text
+*.md   text
+
+# Binary artifacts from packaged tools
+*.exe binary
+*.dll binary
+*.bin binary
+*.ico binary
+*.zip binary
+*.7z  binary
+*.tar binary
+*.gz  binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

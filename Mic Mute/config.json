@@ -1,0 +1,64 @@
+{
+	"AllowUpdateChecker": 1,
+	"DefaultProfile": "Default",
+	"ForceMicrophoneState": 0,
+	"MuteOnStartup": 0,
+	"NotifyForAdminApps": 1,
+	"PreferTheme": -1,
+	"Profiles": [
+		{
+			"afkTimeout": "0",
+			"ExcludeFullscreen": 0,
+			"ForegroundAppsOnly": 1,
+			"LinkedApp": "",
+			"Microphone": [
+				{
+					"HybridPTT": 0,
+					"Inverted": 0,
+					"MuteHotkey": "^!VK4d",
+					"Name": "Default",
+					"PushToTalk": 0,
+					"UnmuteHotkey": "^!VK4d",
+					"VMRStripProperty": ""
+				}
+			],
+			"MicrophoneActions": [
+
+			],
+			"MicrophoneVolumeLock": 0,
+			"OnscreenFeedback": 1,
+			"OnscreenOverlay": {
+				"Enabled": 1,
+				"Position": [
+					{
+						"DisplayId": "Generic PnP Monitor_E0H0RPBLUX8N",
+						"X": 0.960000,
+						"Y": 0.050000
+					},
+					{
+						"DisplayId": "Generic PnP Monitor_0",
+						"X": 0.960000,
+						"Y": 0.050000
+					}
+				],
+				"ShowOnState": "1",
+				"Size": "48",
+				"Theme": "0",
+				"UseCustomIcons": 0
+			},
+			"OSDPos": {
+				"x": 1202,
+				"y": 1251
+			},
+			"ProfileName": "Default",
+			"PTTDelay": 100,
+			"SoundFeedback": 1,
+			"SoundFeedbackDevice": "Default",
+			"SoundFeedbackUseCustomSounds": 0
+		}
+	],
+	"SwitchProfileOSD": 1,
+	"Version": "1.3.3",
+	"VoicemeeterIntegration": 0,
+	"VoicemeeterPath": ""
+}
