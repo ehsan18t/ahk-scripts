@@ -7,7 +7,7 @@ svvPath := FindSoundVolumeView()
 
 ; ----------- Key Bindings -----------
 muteBindings := [
-    { exe: "discord.exe", hotkey: "^!d" },  ; Ctrl + Alt + D
+    { exe: "discords.exe", hotkey: "^!d" },  ; Ctrl + Alt + D
     { exe: "msedge.exe", hotkey: "^!e" }   ; Ctrl + Alt + E
 ]
 
@@ -32,12 +32,16 @@ ToggleAppMute(app, thisHotkey := "", *) {
     global svvPath
     pid := ProcessExist(app)
     if !pid {
-        SoundBeep(1200, 200)  ; App not running
+        PlayErrorTone()
         return
     }
 
-    ; App is running — toggle mute silently
-    RunSvv("/Switch", app, true)
+    ; App is running — toggle mute and play feedback
+    exitCode := RunSvv("/Switch", app)
+    if exitCode
+        PlayErrorTone()
+    else
+        PlaySuccessTone()
 }
 
 
@@ -68,17 +72,23 @@ FindSoundVolumeView() {
     }
 
     ; If not found
-    SoundBeep(1000, 150)  ; SoundVolumeView missing
+    PlayErrorTone()
     ExitApp()
 }
 
-RunSvv(action, target, beepOnFail := false) {
+RunSvv(action, target) {
     global svvPath
     command := Format('"{:s}" {:s} "{:s}"', svvPath, action, target)
     exitCode := RunWait(command, , "Hide")
 
-    if beepOnFail && exitCode
-        SoundBeep(900, 150)
-
     return exitCode
+}
+
+PlaySuccessTone() {
+    SoundBeep(500, 300)
+}
+
+PlayErrorTone() {
+    SoundBeep(700, 120)
+    SoundBeep(800, 140)
 }
