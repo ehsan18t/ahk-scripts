@@ -31,6 +31,11 @@
 				"Enabled": 1,
 				"Position": [
 					{
+						"DisplayId": "_",
+						"X": 0.960000,
+						"Y": 0.050000
+					},
+					{
 						"DisplayId": "Generic PnP Monitor_E0H0RPBLUX8N",
 						"X": 0.960000,
 						"Y": 0.050000

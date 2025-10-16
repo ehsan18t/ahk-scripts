@@ -7,7 +7,7 @@ svvPath := FindSoundVolumeView()
 
 ; ----------- Key Bindings -----------
 muteBindings := [
-    { exe: "discords.exe", hotkey: "^!d" },  ; Ctrl + Alt + D
+    { exe: "discord.exe", hotkey: "^!d" },  ; Ctrl + Alt + D
     { exe: "msedge.exe", hotkey: "^!e" }   ; Ctrl + Alt + E
 ]
 
